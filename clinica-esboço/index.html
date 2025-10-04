@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCare - Clínica Odontológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">DentalCare</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#team">Equipe</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <button class="hamburger">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Seu sorriso é nossa prioridade</h1>
+                <p>Cuidamos da sua saúde bucal com tecnologia de ponta e profissionais qualificados</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#contact" class="btn">Agende sua consulta</a>
+                    <button onclick="openWhatsApp()" class="btn btn-whatsapp">Fale pelo WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nós</h2>
+                <p>Conheça um pouco mais sobre a DentalCare</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text animate">
+                    <h3>Mais de 15 anos cuidando de sorrisos</h3>
+                    <p>A DentalCare nasceu com o propósito de oferecer tratamentos odontológicos de excelência, unindo tecnologia avançada e profissionais altamente qualificados.</p>
+                    <p>Nossa missão é proporcionar aos pacientes saúde bucal, bem-estar e autoestima através de um atendimento humanizado e personalizado.</p>
+                    <p>Valorizamos o conforto, a segurança e a satisfação de quem confia em nossos serviços, utilizando sempre materiais de primeira qualidade e equipamentos modernos.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#services" class="btn">Nossos serviços</a>
+                        <button onclick="openWhatsApp('Gostaria de mais informações sobre a clínica')" class="btn btn-whatsapp">Fale conosco</button>
+                    </div>
+                </div>
+                <div class="about-image animate">
+                    <div style="width:100%;height:300px;background:#88d498;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;">Imagem da Clínica</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Conheça todos os tratamentos que oferecemos</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-icon">🦷</div>
+                    <h3>Clínico Geral</h3>
+                    <p>Check-up regular, limpeza, restaurações e tratamento de cáries para manter sua saúde bucal em dia.</p>
+                    <button onclick="openWhatsApp('Gostaria de agendar uma consulta de clínico geral')" class="btn btn-whatsapp" style="margin-top: 1rem;">Agendar</button>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">😁</div>
+                    <h3>Ortodontia</h3>
+                    <p>Aparelhos fixos e móveis para corrigir a posição dos dentes e melhorar sua mastigação e estética.</p>
+                    <button onclick="openWhatsApp('Gostaria de informações sobre tratamento ortodôntico')" class="btn btn-whatsapp" style="margin-top: 1rem;">Saiba mais</button>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">🌟</div>
+                    <h3>Clareamento</h3>
+                    <p>Clareamento dental a laser e caseiro para devolver a cor natural e o brilho ao seu sorriso.</p>
+                    <button onclick="openWhatsApp('Gostaria de informações sobre clareamento dental')" class="btn btn-whatsapp" style="margin-top: 1rem;">Informações</button>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">🦷</div>
+                    <h3>Implantes</h3>
+                    <p>Reposição de dentes perdidos com implantes de titânio que oferecem resultado natural e duradouro.</p>
+                    <button onclick="openWhatsApp('Gostaria de informações sobre implantes dentários')" class="btn btn-whatsapp" style="margin-top: 1rem;">Consultar</button>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">👴</div>
+                    <h3>Prótese Dentária</h3>
+                    <p>Próteses fixas e removíveis para reabilitação oral com conforto, estética e funcionalidade.</p>
+                    <button onclick="openWhatsApp('Gostaria de informações sobre prótese dentária')" class="btn btn-whatsapp" style="margin-top: 1rem;">Detalhes</button>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon">👶</div>
+                    <h3>Odontopediatria</h3>
+                    <p>Atendimento especializado para crianças, tornando a ida ao dentista uma experiência agradável.</p>
+                    <button onclick="openWhatsApp('Gostaria de agendar uma consulta de odontopediatria')" class="btn btn-whatsapp" style="margin-top: 1rem;">Agendar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossa Equipe</h2>
+                <p>Profissionais especializados para cuidar do seu sorriso</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member animate">
+                    <div class="team-img">👩‍⚕️</div>
+                    <div class="team-info">
+                        <h3>Dra. Ana Silva</h3>
+                        <p>Clínico Geral e Ortodontia</p>
+                        <p>CRO: 12345</p>
+                        <button onclick="openWhatsApp('Gostaria de agendar uma consulta com a Dra. Ana Silva')" class="btn btn-whatsapp" style="margin-top: 1rem;">Agendar</button>
+                    </div>
+                </div>
+                <div class="team-member animate">
+                    <div class="team-img">👨‍⚕️</div>
+                    <div class="team-info">
+                        <h3>Dr. Carlos Mendes</h3>
+                        <p>Implantodontia e Prótese</p>
+                        <p>CRO: 67890</p>
+                        <button onclick="openWhatsApp('Gostaria de agendar uma consulta com o Dr. Carlos Mendes')" class="btn btn-whatsapp" style="margin-top: 1rem;">Agendar</button>
+                    </div>
+                </div>
+                <div class="team-member animate">
+                    <div class="team-img">👩‍⚕️</div>
+                    <div class="team-info">
+                        <h3>Dra. Paula Costa</h3>
+                        <p>Odontopediatria e Ortodontia</p>
+                        <p>CRO: 54321</p>
+                        <button onclick="openWhatsApp('Gostaria de agendar uma consulta com a Dra. Paula Costa')" class="btn btn-whatsapp" style="margin-top: 1rem;">Agendar</button>
+                    </div>
+                </div>
+                <div class="team-member animate">
+                    <div class="team-img">👨‍⚕️</div>
+                    <div class="team-info">
+                        <h3>Dr. Roberto Alves</h3>
+                        <p>Endodontia e Clínico Geral</p>
+                        <p>CRO: 09876</p>
+                        <button onclick="openWhatsApp('Gostaria de agendar uma consulta com o Dr. Roberto Alves')" class="btn btn-whatsapp" style="margin-top: 1rem;">Agendar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que nossos pacientes dizem</h2>
+                <p>Depoimentos de quem já experimentou nossos serviços</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p class="testimonial-text">"Fiz clareamento dental na DentalCare e fiquei extremamente satisfeita com o resultado. A equipe é muito atenciosa e profissional!"</p>
+                    <p class="testimonial-author">Marina Oliveira</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Coloquei implantes com o Dr. Carlos e foi a melhor decisão que tomei. O processo foi indolor e o resultado ficou perfeito!"</p>
+                    <p class="testimonial-author">João Silva</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Minha filha tinha muito medo de dentista, mas a Dra. Paula fez um trabalho incrível. Agora ela adora ir às consultas!"</p>
+                    <p class="testimonial-author">Cristina Santos</p>
+                </div>
+                <div class="testimonial-controls">
+                    <div class="testimonial-control active" data-index="0"></div>
+                    <div class="testimonial-control" data-index="1"></div>
+                    <div class="testimonial-control" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Agende sua consulta ou tire suas dúvidas</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <p><strong>Endereço:</strong></p>
+                            <p>Rua das Flores, 123, Centro<br>São Paulo - SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <p><strong>Telefone:</strong></p>
+                            <p><a href="tel:+551134567890" class="whatsapp-link">(11) 3456-7890</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <p><strong>Email:</strong></p>
+                            <p><a href="mailto:contato@dentalcare.com.br">contato@dentalcare.com.br</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <p><strong>Horário de Funcionamento:</strong></p>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon" style="color: var(--whatsapp);">💬</div>
+                        <div>
+                            <p><strong>WhatsApp:</strong></p>
+                            <p><a href="https://wa.me/551134567890" class="whatsapp-link" target="_blank">(11) 3456-7890</a></p>
+                        </div>
+                    </div>
+                    <button onclick="openWhatsApp()" class="btn btn-whatsapp" style="margin-top: 1rem;">Falar pelo WhatsApp</button>
+                </div>
+                <div class="contact-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone/WhatsApp</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de interesse</label>
+                            <select id="service" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="Clinico Geral">Clínico Geral</option>
+                                <option value="Ortodontia">Ortodontia</option>
+                                <option value="Clareamento">Clareamento</option>
+                                <option value="Implantes">Implantes</option>
+                                <option value="Proteses">Próteses Dentárias</option>
+                                <option value="Odontopediatria">Odontopediatria</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar mensagem</button>
+                        <button type="button" onclick="sendViaWhatsApp()" class="btn btn-whatsapp">Enviar via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">DentalCare</div>
+                    <p>Cuidando do seu sorriso com excelência e dedicação há mais de 15 anos.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📱</a>
+                        <a href="#" class="social-link">💻</a>
+                        <a href="#" class="social-link">📸</a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#team">Equipe</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Serviços</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Clínico Geral</a></li>
+                        <li><a href="#">Ortodontia</a></li>
+                        <li><a href="#">Clareamento</a></li>
+                        <li><a href="#">Implantes</a></li>
+                        <li><a href="#">Odontopediatria</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contato</h3>
+                    <p>Rua das Flores, 123, Centro</p>
+                    <p>São Paulo - SP</p>
+                    <p><a href="tel:+551134567890" class="whatsapp-link">(11) 3456-7890</a></p>
+                    <p><a href="https://wa.me/551134567890" class="whatsapp-link" target="_blank">WhatsApp</a></p>
+                    <p><a href="mailto:contato@dentalcare.com.br">contato@dentalcare.com.br</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 DentalCare - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5511942999918" class="whatsapp-float" target="_blank" id="whatsappFloat"> <img src="" alt="" srcset=""></a>
+    <script src="main.js"></script>
+</body>
+</html>
