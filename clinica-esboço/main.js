@@ -1,4 +1,3 @@
-   // Menu Mobile
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         
@@ -7,7 +6,6 @@
             hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
 
-        // Fechar menu ao clicar em um link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -15,7 +13,6 @@
             });
         });
 
-        // Animação de rolagem
         const animateElements = document.querySelectorAll('.animate');
         
         function checkScroll() {
@@ -30,11 +27,10 @@
             });
         }
         
-        // Verificar ao carregar e ao rolar
+ 
         window.addEventListener('load', checkScroll);
         window.addEventListener('scroll', checkScroll);
 
-        // Slider de depoimentos
         const testimonials = document.querySelectorAll('.testimonial');
         const controls = document.querySelectorAll('.testimonial-control');
         let currentTestimonial = 0;
@@ -47,32 +43,31 @@
             controls[index].classList.add('active');
             currentTestimonial = index;
         }
-        
-        // Adicionar eventos aos controles
+ 
         controls.forEach((control, index) => {
             control.addEventListener('click', () => {
                 showTestimonial(index);
             });
         });
         
-        // Trocar depoimentos automaticamente
+  
         setInterval(() => {
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             showTestimonial(currentTestimonial);
         }, 5000);
 
-        // Formulário de contato
+
         const contactForm = document.getElementById('contactForm');
         
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Aqui normalmente enviaríamos os dados para um servidor
+  
             alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
             contactForm.reset();
         });
 
-        // Suavizar scroll para links internos
+ 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -83,20 +78,20 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Ajuste para o header fixo
+                        top: targetElement.offsetTop - 80, 
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Funções do WhatsApp
+
         function openWhatsApp(message = 'Olá, gostaria de mais informações sobre os serviços da DentalCare') {
-            // Codificar a mensagem para URL
+
             const encodedMessage = encodeURIComponent(message);
-            // Número de telefone (substitua pelo número real)
+
             const phoneNumber = '551134567890';
-            // Abrir WhatsApp
+  
             window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
         }
 
@@ -120,9 +115,9 @@ Mensagem: ${message}`;
             openWhatsApp(fullMessage);
         }
 
-        // Mostrar botão flutuante do WhatsApp após alguns segundos
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('whatsappFloat').classList.add('visible');
             }, 3000);
+
         });
